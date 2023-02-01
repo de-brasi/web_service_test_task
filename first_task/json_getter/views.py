@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 
 def example_getter(request):
-    return HttpResponse("Hello world!")
+    return HttpResponse("I'll give some useful json")
 
 
 def example_core_page(request):
-    return HttpResponse("I'll give some useful json")
+    return HttpResponse("Hello world!")
