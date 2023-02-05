@@ -1,4 +1,5 @@
-import os, getpass
+import getpass
+import os
 
 command = os.getcwd() + '/../venv/bin/gunicorn'
 pythonpath = os.getcwd() + '/first_task'
