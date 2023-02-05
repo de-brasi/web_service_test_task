@@ -1,6 +1,8 @@
-command = '/home/ilya/WorkSpace/Projects/KASKAD_GROUP_simple_http_service/venv/bin/gunicorn'
-pythonpath = '/home/ilya/WorkSpace/Projects/KASKAD_GROUP_simple_http_service/first_task/first_task'
+import os, getpass
+
+command = os.getcwd() + '/../venv/bin/gunicorn'
+pythonpath = os.getcwd() + '/first_task'
 bind = '127.0.0.1:8001'
 workers = 3
-user = 'ilya'
+user = getpass.getuser()
 raw_env = 'DJANGO_SETTINGS_MODULE=first_task.settings'
