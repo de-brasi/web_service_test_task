@@ -13,9 +13,15 @@
 ## Installation and launch
 ### Quick start:
 ```shell
+git clone git@github.com:de-brasi/web_service_test_task.git
 . ./start.sh
 ```
 ### Manual start:
+Download source code:
+```shell
+git clone git@github.com:de-brasi/web_service_test_task.git
+```
+
 Install virtualenv:
 ```shell
 pip install virtualenv
@@ -24,6 +30,7 @@ pip install virtualenv
 Create virtual environment:
 ```shell
 virtualenv venv
+source venv/bin/activate
 ```
 
 Download required dependencies:
@@ -34,5 +41,7 @@ pip install -r requirements.txt
 Run WSGI-server:
 ```shell
 cd ./first_task
-. ./bin/start_gunicorn.sh
+#. ./bin/start_gunicorn.sh
+source $(pwd)/../venv/bin/activate
+gunicorn -c "$(pwd)/gunicorn_config.py" first_task.wsgi
 ```
